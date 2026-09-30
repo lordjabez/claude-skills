@@ -1,0 +1,31 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-skills",
+  "description": "Agent Skills for Claude Code by Judson Neer, published as individually installable plugins",
+  "owner": {
+    "name": "Judson Neer",
+    "email": "jud@greyflannelconsulting.com"
+  },
+  "plugins": [
+    {
+      "name": "create-skill",
+      "source": "./plugins/create-skill",
+      "description": "Build a new Claude Code skill, or restructure an existing one, using progressive disclosure. Covers naming, writing a description that actually triggers, splitting content into bundled files versus scripts, and verifying a skill fires.",
+      "category": "development",
+      "author": {
+        "name": "Judson Neer"
+      },
+      "homepage": "https://github.com/lordjabez/claude-skills"
+    },
+    {
+      "name": "update-documentation",
+      "source": "./plugins/document",
+      "description": "Review README.md, CLAUDE.md, and other documentation across a repo for stale or missing content, using a subagent so the review does not consume the main context.",
+      "category": "productivity",
+      "author": {
+        "name": "Judson Neer"
+      },
+      "homepage": "https://github.com/lordjabez/claude-skills"
+    }
+  ]
+}

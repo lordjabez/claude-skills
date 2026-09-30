@@ -1,0 +1,14 @@
+name: Validate
+
+on: push
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: lts/*
+      - run: npm install -g @anthropic-ai/claude-code
+      - run: claude plugin validate .

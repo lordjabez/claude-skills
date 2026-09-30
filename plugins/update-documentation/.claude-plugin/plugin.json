@@ -1,0 +1,11 @@
+{
+  "name": "update-documentation",
+  "description": "Review README.md, CLAUDE.md, and other documentation across a repo for stale or missing content, using a subagent so the review does not consume the main context.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Judson Neer",
+    "email": "jud@greyflannelconsulting.com"
+  },
+  "homepage": "https://github.com/lordjabez/claude-skills",
+  "license": "MIT"
+}

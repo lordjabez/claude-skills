@@ -1,0 +1,11 @@
+{
+  "name": "create-skill",
+  "description": "Build a new Claude Code skill, or restructure an existing one, using progressive disclosure. Covers naming, writing a description that actually triggers, splitting content into bundled files versus scripts, and verifying a skill fires.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Judson Neer",
+    "email": "jud@greyflannelconsulting.com"
+  },
+  "homepage": "https://github.com/lordjabez/claude-skills",
+  "license": "MIT"
+}
