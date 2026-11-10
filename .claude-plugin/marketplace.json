@@ -19,8 +19,18 @@
     },
     {
       "name": "update-documentation",
-      "source": "./plugins/document",
+      "source": "./plugins/update-documentation",
       "description": "Review README.md, CLAUDE.md, and other documentation across a repo for stale or missing content, using a subagent so the review does not consume the main context.",
+      "category": "productivity",
+      "author": {
+        "name": "Judson Neer"
+      },
+      "homepage": "https://github.com/lordjabez/claude-skills"
+    },
+    {
+      "name": "write-as-jud",
+      "source": "./plugins/write-as-jud",
+      "description": "Write prose in Judson Neer's voice: emails, blog posts, social posts, and other writing under his name. Published as a worked example of a personal voice skill; fork it and redo the analysis on your own writing.",
       "category": "productivity",
       "author": {
         "name": "Judson Neer"

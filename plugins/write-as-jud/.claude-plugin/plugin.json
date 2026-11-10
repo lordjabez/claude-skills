@@ -1,0 +1,11 @@
+{
+  "name": "write-as-jud",
+  "description": "Write prose in Judson Neer's voice: emails, blog posts, social posts, and other writing under his name. Published as a worked example of a personal voice skill; fork it and redo the analysis on your own writing.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Judson Neer",
+    "email": "jud@greyflannelconsulting.com"
+  },
+  "homepage": "https://github.com/lordjabez/claude-skills",
+  "license": "MIT"
+}

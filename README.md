@@ -17,6 +17,7 @@ Then install whichever skills you want:
 ```bash
 /plugin install create-skill@claude-skills
 /plugin install update-documentation@claude-skills
+/plugin install write-as-jud@claude-skills
 ```
 
 ## Available Skills
@@ -32,11 +33,22 @@ levels and what belongs at each, the full frontmatter field reference, and
 verification by trigger test, near-miss test, and baseline comparison. Bundles a
 copyable template and checklist.
 
-### update-documention
+### update-documentation
 
 Reviews `README.md`, `CLAUDE.md`, and other documentation across a repo for
 stale, missing, or contradictory content. Runs in a subagent so the review does
 not consume the main session's context.
+
+### write-as-jud
+
+Writes prose in my voice: emails, blog posts, social posts, and anything else
+going out under my name. Built from an analysis of about 350 long-form pieces
+and 850 sent emails, with a shared core voice plus separate modes for email,
+blog, and formal technical writing.
+
+Nobody else needs to sound like me, so this one is mostly a worked example. Fork
+it, run the same kind of analysis on your own writing, and swap in the results.
+The email examples are invented, written to match the observed patterns.
 
 ## Why one plugin per skill
 
