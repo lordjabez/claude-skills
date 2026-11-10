@@ -18,6 +18,16 @@
       "homepage": "https://github.com/lordjabez/claude-skills"
     },
     {
+      "name": "style-of-the-faith",
+      "source": "./plugins/style-of-the-faith",
+      "description": "Visual identity for the Church of the Incandescent Filaments: named palette, typography, and color roles, centralized so deck, document, and artifact skills share one source of truth.",
+      "category": "design",
+      "author": {
+        "name": "Judson Neer"
+      },
+      "homepage": "https://github.com/lordjabez/claude-skills"
+    },
+    {
       "name": "update-documentation",
       "source": "./plugins/update-documentation",
       "description": "Review README.md, CLAUDE.md, and other documentation across a repo for stale or missing content, using a subagent so the review does not consume the main context.",

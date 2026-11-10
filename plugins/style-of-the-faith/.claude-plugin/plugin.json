@@ -1,0 +1,11 @@
+{
+  "name": "style-of-the-faith",
+  "description": "Visual identity for the Church of the Incandescent Filaments: named palette, typography, and color roles, centralized so deck, document, and artifact skills share one source of truth.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Judson Neer",
+    "email": "jud@greyflannelconsulting.com"
+  },
+  "homepage": "https://github.com/lordjabez/claude-skills",
+  "license": "MIT"
+}

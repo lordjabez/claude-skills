@@ -16,6 +16,7 @@ Then install whichever skills you want:
 
 ```bash
 /plugin install create-skill@claude-skills
+/plugin install style-of-the-faith@claude-skills
 /plugin install update-documentation@claude-skills
 /plugin install write-as-jud@claude-skills
 ```
@@ -32,6 +33,14 @@ reference), writing a description that actually triggers, the four disclosure
 levels and what belongs at each, the full frontmatter field reference, and
 verification by trigger test, near-miss test, and baseline comparison. Bundles a
 copyable template and checklist.
+
+### style-of-the-faith
+
+The visual identity of the Church of the Incandescent Filaments: a named
+palette of 43 swatches, Libre Franklin and EB Garamond typography, semantic
+color roles, and contrast guidance. Holds no workflow of its own. Skills that
+build decks, documents, and artifacts load it so colors and fonts live in one
+place. Ships a `tokens.css` for HTML and WeasyPrint output.
 
 ### update-documentation
 
