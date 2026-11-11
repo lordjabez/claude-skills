@@ -1,0 +1,61 @@
+# Phrases that don't sound like Jud. One per line; "phrase | suggestion" is optional.
+# Matched case-insensitively as whole phrases.
+
+# Corporate filler
+please find attached | just say what's attached
+as per my last email
+kindly | please, or drop it
+i hope this finds you well | drop it
+i hope this email finds you well | drop it
+don't hesitate to reach out | drop it
+do not hesitate to reach out | drop it
+circle back
+touch base
+i wanted to reach out
+just following up
+
+# Hype
+robust
+comprehensive
+seamless
+seamlessly
+elegant
+streamlined
+cutting-edge
+best-in-class
+world-class
+game-changing
+game changer
+empower
+synergy
+holistic
+revolutionize
+state-of-the-art
+
+# Model tells
+delve
+tapestry
+testament to
+worth noting | just state the thing
+here's the thing | just make the point
+core insight
+key principle
+sharp observation
+key takeaway
+this matters
+straightforward | say what's actually simple, or cut
+navigate the complexities
+in today's fast-paced
+at the end of the day
+needless to say
+it goes without saying
+nuanced
+multifaceted
+pivotal
+underscore
+underscores
+foster
+unlock
+dive into
+deep dive
+ever-evolving

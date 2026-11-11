@@ -8,7 +8,8 @@ Derived from 345 pieces written 2015-2026.
 
 ## Structure
 
-The typical shape, and it is short:
+The typical shape, and it is short (median about 175 words, and nine in ten
+posts under 400):
 
 1. **Hook**, one or two sentences: a personal anecdote, a bold declaration, or
    a quote
@@ -22,6 +23,73 @@ abruptly, and he trusts the reader to draw their own conclusion.
 Paragraphs run two to four sentences, with single-sentence paragraphs used as
 punchlines and transitions. Alternate medium and short for rhythm. Lists are
 frequent and reflect the engineering mindset.
+
+## When it runs long
+
+Long posts (700 words and up) are rare, and they're almost always practical:
+a guide, a process, an inventory, or a talk written up after the fact. The
+core voice holds at the sentence level, but the hook-pivot-land shape gives
+way to one of these.
+
+**Question-led or numbered guide.** Plain headers that walk the reader through
+the topic. Either the questions they'd ask ("Why?", "Who?", "How?", "When?",
+"Where?", "What?"), each section opening by quoting that question back
+("The first question I typically get is a variant of..."), or numbered items
+("Mistake 1: Regurgitating resume content"). When a guide has two audiences,
+address both under each item ("And interviewers?"). Chain the sections with
+transitions that hand off to the next header: "Speaking of...", "Closely
+related to this next mistake:", "Especially don't fill silence by doing the
+following:".
+
+**One lesson per paragraph.** Each paragraph opens with an imperative topic
+sentence ("Have a generalist mindset.", "Take failure personally.", "Capture
+your work log in situ."), then two to five sentences of why and how. Lands on
+a short acknowledgment of difficulty: "Sound hard? It is."
+
+**Annotated inventory.** Gear, projects, old code, career milestones. Each
+entry is "Name - one paragraph" mixing what it is, the backstory, an honest
+opinion, and an aside: "I doubt this still works", "I can only take minor
+credit for this one", "(still got an A)". Group with plain subheads when the
+list is big.
+
+**Process.** A short framing paragraph that bounds when the process applies
+("most applicable when estimating a project... overkill for a single task"),
+then a numbered or bulleted procedure in the imperative, each step a full
+sentence or two.
+
+What long posts do that short ones don't:
+
+- **Say where the piece came from.** "I got frequent questions about this...
+  This post is my best attempt to capture what I said there." "Been wanting to
+  write this post for 5 years."
+- **Admit to the repetition or the length.** Open with a list of prior posts on
+  the topic ("apparently I write about it a lot... Add this post to the
+  cacophony, I guess"), or close by acknowledging it ("Thanks for reading all
+  the way to the end of this monster post", "Well, that was fun (for me, at
+  least)").
+- **Earn authority with a number, then hedge it.** "Having done over 150
+  interviews during my tenure there (about half as a Bar Raiser)", followed by
+  "Take them with a grain of salt, but only one...", "This last one might be
+  controversial, but I stand by it.", or "Full disclosure: I'm bad at this
+  one."
+- **Give rules of thumb as specific numbers.** Pause for 8 full seconds, 10
+  minutes per story, a 1.25 multiplier, 4-6 weeks for foundational exams.
+  Vague advice reads unlike him.
+- **Let paragraphs grow.** Four to seven sentences is normal here, though the
+  sentences themselves stay short. No walls of text: break with lists and
+  headers.
+- **Give asides their own paragraph** when they're practical tips: "(Quick
+  aside: I strongly recommend...)", "(Oh, and speaking of things to do right
+  before you start...)".
+- **Engage the reader directly.** "Please go look. I'll wait." "Seriously,
+  right now. I'll wait." "(you did prepare your stories, right?)"
+- **Close warm.** Gratitude to whoever made the resources possible, a direct
+  push to act ("go right now and get a date on the calendar"), a sign-off
+  ("Happy documenting my friends!"), or a tease of a future post.
+
+Titles stay allusive even for the most practical guide: "Routinely Solicited
+Inquiries" for a certification FAQ, "Raise Your Ebenezer" for brag documents,
+"Put Aside The Ranger" for becoming a tech lead.
 
 ## Openings
 

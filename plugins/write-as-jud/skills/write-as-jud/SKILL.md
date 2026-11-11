@@ -6,9 +6,11 @@ description: >-
   under his name. Use whenever he asks to draft, write, reply to, rewrite, punch
   up, shorten, or "make this sound like me", and just as readily when he never
   says "as me" but is plainly authoring his own writing rather than the
-  project's. Do not use it for code, code comments, commit messages, pull
-  request descriptions, or technical documentation, which follow the repo's own
-  conventions instead.
+  project's. Proposals, estimates, feedback and reviews, and notes have their
+  own skills in this plugin, which build on this one. Do not use it for code,
+  code comments, commit messages, pull request descriptions, or technical
+  documentation, which follow the repo's own conventions instead.
+allowed-tools: Bash(${CLAUDE_SKILL_DIR}/scripts/voice_lint.py *)
 ---
 
 # Write As Jud
@@ -23,10 +25,35 @@ The mode files hold what changes by format.
 | --- | --- | --- |
 | Email, Teams or Slack message, meeting invite | [email.md](email.md) | Greeting and sign-off conventions, a ~44 word median, the ask up front |
 | Blog post, article, LinkedIn or social post, newsletter | [blog.md](blog.md) | Allusive titles, hook-pivot-land structure, cultural references, recurring themes |
-| Formal technical writing: whitepapers, proposals, standards, architecture docs | [technical.md](technical.md) | Not yet characterized. Read that file before attempting one |
 
-Then draft, then check the draft against the core below. Most misses are
+Other genres have their own skills in this plugin. Each one builds on the core
+voice below and says only what changes:
+
+| Writing | Skill |
+| --- | --- |
+| Proposals, RFP and RFI responses, SOWs, architecture narratives, whitepapers, security questionnaires | `write-proposal` |
+| Estimates, pricing rationale, work orders, hours tracking | `write-estimate` |
+| Feedback letters, reviews, self-assessments, resumes, bios, hard-conversation talk tracks | `write-feedback` |
+| Meeting notes, scratchpads, agendas, speaker notes, interview guides, checklists | `write-notes` |
+
+Then draft, lint, and check the draft against the core below. Most misses are
 failures of the core, not of the mode.
+
+## Lint the draft
+
+Run the bundled linter on the draft, with the mode that matches the writing:
+
+```bash
+${CLAUDE_SKILL_DIR}/scripts/voice_lint.py --mode email draft.md
+```
+
+Modes are `email`, `blog`, `proposal`, `notes`, `estimate`, and `feedback`. It
+flags mechanical tells: em dashes, phrases from [scripts/tells.txt](scripts/tells.txt),
+"not X but Y" framing, spelled-out contractions, missing asides, length, and
+throat-clearing openers and closers. Every finding is a warning. Fix the ones
+that are real tells and ignore the rest, such as a phrase inside a quotation.
+A clean lint is the floor, not the goal: it can't tell whether the draft sounds
+like him, which is what the checklist below is for.
 
 ## The core voice
 

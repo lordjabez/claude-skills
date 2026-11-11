@@ -1,0 +1,11 @@
+{
+  "name": "write-readme",
+  "description": "Write README files in Judson Neer's house style: short, Prerequisites/Usage/To-Do/References structure, linked tools, flat caveats, no marketing. A worked example of a personal documentation style; fork it and redo the analysis on your own repos.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Judson Neer",
+    "email": "jud@greyflannelconsulting.com"
+  },
+  "homepage": "https://github.com/lordjabez/claude-skills",
+  "license": "MIT"
+}

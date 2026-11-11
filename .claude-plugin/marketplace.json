@@ -18,6 +18,16 @@
       "homepage": "https://github.com/lordjabez/claude-skills"
     },
     {
+      "name": "draw-architecture-diagram",
+      "source": "./plugins/draw-architecture-diagram",
+      "description": "Draw cloud architecture and data-flow diagrams as draw.io XML the way Judson Neer lays them out: one boundary, layers from users to business logic to data to background jobs, external systems around the edge. Includes the recurring draw.io style strings.",
+      "category": "design",
+      "author": {
+        "name": "Judson Neer"
+      },
+      "homepage": "https://github.com/lordjabez/claude-skills"
+    },
+    {
       "name": "style-of-the-faith",
       "source": "./plugins/style-of-the-faith",
       "description": "Visual identity for the Church of the Incandescent Filaments: named palette, typography, and color roles, centralized so deck, document, and artifact skills share one source of truth.",
@@ -40,7 +50,17 @@
     {
       "name": "write-as-jud",
       "source": "./plugins/write-as-jud",
-      "description": "Write prose in Judson Neer's voice: emails, blog posts, social posts, and other writing under his name. Published as a worked example of a personal voice skill; fork it and redo the analysis on your own writing.",
+      "description": "Write prose in Judson Neer's voice: emails and blog posts from a shared core voice, plus companion skills for proposals, estimates, feedback and reviews, and working notes, with an advisory linter for mechanical tells. Published as a worked example of a personal voice skill; fork it and redo the analysis on your own writing.",
+      "category": "productivity",
+      "author": {
+        "name": "Judson Neer"
+      },
+      "homepage": "https://github.com/lordjabez/claude-skills"
+    },
+    {
+      "name": "write-readme",
+      "source": "./plugins/write-readme",
+      "description": "Write README files in Judson Neer's house style: short, Prerequisites/Usage/To-Do/References structure, linked tools, flat caveats, no marketing. A worked example of a personal documentation style; fork it and redo the analysis on your own repos.",
       "category": "productivity",
       "author": {
         "name": "Judson Neer"
