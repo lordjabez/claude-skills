@@ -54,6 +54,37 @@ cases, so just tell me which. I need to get better at trusting the other
 managers' judgment too, so let's compare notes next month.
 ```
 
+## Recommendation, close working relationship
+
+```text
+I managed Rosa for about three years on a team building benefits systems for
+county governments. Two things set her apart.
+
+First, she was a quick study with a knack for the unglamorous parts of a
+system. When our payment integration started failing nightly, she taught
+herself the bank's file format in a week and found the rounding bug three
+other engineers had missed.
+
+Speaking of that bug, Rosa told me plainly that my rushed timeline caused it
+(she was right), and did it in a way that left everyone ready to fix it rather
+than defend themselves. A lesser engineer would have patched it quietly and
+moved on. That kind of candor is hard to teach, and I'm a better manager for
+having been on the receiving end of it.
+
+If your team needs an engineer who'll find the real problem and tell you the
+truth about it, talk to Rosa.
+```
+
+## Recommendation, light contact
+
+```text
+Marcus and I worked at the same company for two years. We were on different
+teams, so our paths crossed mostly during launches, but every time they did
+he had the release checklist done before anyone asked. He also brought
+homemade bread to every retro, which did more for morale than most of our
+process changes. It was a pleasure working with him.
+```
+
 ## Manager review of a report
 
 ```text

@@ -33,7 +33,7 @@ voice below and says only what changes:
 | --- | --- |
 | Proposals, RFP and RFI responses, SOWs, architecture narratives, whitepapers, security questionnaires | `write-proposal` |
 | Estimates, pricing rationale, work orders, hours tracking | `write-estimate` |
-| Feedback letters, reviews, self-assessments, resumes, bios, hard-conversation talk tracks | `write-feedback` |
+| Feedback letters, recommendations, reviews, self-assessments, resumes, bios, hard-conversation talk tracks | `write-feedback` |
 | Meeting notes, scratchpads, agendas, speaker notes, interview guides, checklists | `write-notes` |
 
 Then draft, lint, and check the draft against the core below. Most misses are
@@ -95,6 +95,11 @@ his own expense. Even serious pieces carry one wry aside.
   a caricature, and it is the second most common way to get him wrong.
 - Elevated vocabulary shows up alongside the casual and the mix is deliberate:
   "pernicious", "eschew", "behooves", "apropos".
+- Plain idioms do the same work with less flourish: "in spades", "with
+  aplomb", "a knack for", "seeing around corners". One per piece, not one per
+  paragraph.
+- Credit runs outward. When praising someone, he readily makes himself the
+  weaker party ("I'm no match for..."); when praised, he deflects.
 - Technical terms go unexplained when the audience would know them. He trusts
   his reader.
 

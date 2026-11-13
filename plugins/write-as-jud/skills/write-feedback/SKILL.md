@@ -5,7 +5,8 @@ description: >-
   feedback letters, manager reviews of direct reports, self-assessments,
   accomplishment logs, promotion evidence, growth plans, resume bullets, and
   speaker or professional bios. Use whenever he asks to draft, reword, or
-  sharpen feedback for someone, fill out a review form, write his own
+  sharpen feedback for someone, write a LinkedIn recommendation or a
+  reference for a former colleague, fill out a review form, write his own
   self-review, log or summarize what he accomplished, update a resume, or
   write a bio, including phrasings like "help me tell them what they're doing
   well", "write up my year", or "turn this into resume bullets". Also covers
@@ -26,7 +27,8 @@ two differ.
 
 Derived from a handful of feedback letters, manager reviews, a
 self-assessment, review reflections, a growth plan, an accomplishments log, a
-resume, a bio, and a few dozen talk tracks for difficult conversations. It
+resume, a bio, a few dozen talk tracks for difficult conversations, and 32
+LinkedIn recommendations written over eight years. It
 records the approach (structure, moves, tone, ordering, lengths), not the
 source text. Every example in this skill is invented.
 
@@ -35,6 +37,7 @@ source text. Every example in this skill is invented.
 | Form | Shape | Length |
 | --- | --- | --- |
 | Feedback letter to a peer or leader | Prose letter: "Name," and signed "Jud" | 450-550 words, six or seven paragraphs |
+| Recommendation or reference | Prose, no greeting or signature, third person about them | 60-150 words for light contact, 250-400 for close work |
 | Manager review of a report | Fragment bullets under the template's headings, tagged with values | Three or four bullets per heading |
 | Self-assessment | Full first-person paragraphs, one per theme | 250-400 words per prompt |
 | Accomplishment log or promotion evidence | Nested bullets, action first and number last | 6-20 words per bullet |
@@ -71,6 +74,57 @@ The structure is consistent:
 
 Italics land on the pivotal word, once or twice per letter. One parenthetical
 joke per letter is about right.
+
+## Recommendations and references
+
+Written for a stranger deciding whether to hire or work with the person, so
+everything is in service of credibility. Praise only, no growth section.
+
+1. **Establish standing in the first sentence**: how long, where or on what,
+   and the exact relationship. Be precise when it's indirect ("I didn't manage
+   her, but I oversaw every project she touched"). Occasionally a bold hook
+   replaces it ("If I had to pick one word...", "possibly the best hire I've
+   made"), with the standing in the next sentence.
+2. **Announce the count when there's more than one strength**, then walk them
+   in order. The count varies (two, three, "a few"). Link paragraphs with
+   transitions that pick up the last thought ("Relatedly,", "Speaking of
+   customers,", "Of course, none of that works without..."), and save the
+   strongest for last with "Most importantly" or "Finally".
+3. **Each strength gets claim, evidence, then why it's rare.** The evidence is
+   a specific project, situation, or turnaround, not an adjective. Raise the
+   stakes before the result when the result sounds modest ("That may not sound
+   like much, but..."), or describe how bad things were before they stepped
+   in. Rarity framing is his usual third beat: "I've seen this in few
+   engineers", "it's hard to teach", "uncommon in someone this early in their
+   career".
+4. **Contrast with a lesser version of the role** at most once: what a lesser
+   PM, engineer, or leader would have done, and what they did instead.
+5. **Credit candor paired with grace.** Speaking up under pressure, telling
+   leadership the truth, pushing back on him (with a parenthetical admitting
+   when he was the one who was wrong), always with tact or calm. It's his
+   most-praised trait after technical breadth and customer focus.
+6. **Implicate himself when it's true**: he couldn't match their skill, they
+   changed his career, he's a better manager for it. Upward recommendations
+   lean on gratitude for the chance they took on him.
+7. **One human detail when he knows one**: a hobby, a kindness, an office
+   rivalry. The best ones turn the detail into evidence (a newcomer who got
+   good at a game fast is someone who learns anything fast) or into a
+   joke-then-pivot close.
+8. **Close aimed at the reader**: a conditional pitch ("If your team needs X
+   who Y, call Z"), a plain "it was a pleasure", or both. "Would be an asset
+   to any team" is his phrase but he's leaned on it heavily, so use it at most
+   occasionally and prefer naming the kind of team.
+
+Scale length and claims to what he actually saw. With light contact, say so
+("we didn't overlap much, but when we did...") and keep it to two or three
+short paragraphs; don't invent evidence. Roles get judged against their own
+job ("that's the heart of the QA role, and he did it well").
+
+Vocabulary that shows up here: "quick study", "technical chops", "a knack
+for", "seeing around corners", "in spades", "with aplomb", "doggedly", "to a
+fault", "sniff out", "a steady hand", "thankless behind-the-scenes work",
+"put simply". When he's at a company with named values, he borrows their
+language lightly. Technology lists go in parentheses ending "to name a few".
 
 ## Recurring themes
 
@@ -146,8 +200,9 @@ a personal one edited for confidentiality. The personal one feeds the resume.
   write open-source software, play bass guitar, and run, though not all at
   the same time." Don't name or describe an employer unless he supplies one.
 
-Invented example letter, review, and log entries: [examples.md](examples.md).
-Open it before drafting a full letter or self-assessment.
+Invented example letter, recommendation, review, and log entries:
+[examples.md](examples.md). Open it before drafting a full letter,
+recommendation, or self-assessment.
 
 ## Check the draft
 
@@ -161,7 +216,9 @@ ${CLAUDE_SKILL_DIR}/../write-as-jud/scripts/voice_lint.py --mode feedback FILE
 Then:
 
 1. Is every piece of praise backed by a specific example?
-2. Is the growth section at least as long as the praise, and concrete?
+2. Is the growth section at least as long as the praise, and concrete? (Not
+   for recommendations, which have none.)
 3. Does he implicate himself or offer help somewhere?
-4. Does it end looking forward, in one or two sentences?
+4. Does it end looking forward, in one or two sentences? For a
+   recommendation, does it end speaking to the reader?
 5. Any adjective standing in for evidence? Replace it with what happened.

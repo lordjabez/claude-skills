@@ -72,8 +72,8 @@ from its own set of samples:
   narratives, and security questionnaire answers
 - `write-estimate`: level-of-effort estimates, pricing rationale, work orders,
   and hours tracking, with the math always visible
-- `write-feedback`: feedback letters, reviews, self-assessments, resumes, bios,
-  and talk tracks for hard conversations
+- `write-feedback`: feedback letters, recommendations, reviews,
+  self-assessments, resumes, bios, and talk tracks for hard conversations
 - `write-notes`: meeting notes, scratchpads, agendas, speaker notes, and
   interview guides
 
