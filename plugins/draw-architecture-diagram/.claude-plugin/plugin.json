@@ -1,7 +1,7 @@
 {
   "name": "draw-architecture-diagram",
   "description": "Draw cloud architecture and data-flow diagrams as draw.io XML the way Judson Neer lays them out: one boundary, layers from users to business logic to data to background jobs, external systems around the edge. Includes the recurring draw.io style strings.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "Judson Neer",
     "email": "jud@greyflannelconsulting.com"

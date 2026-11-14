@@ -1,7 +1,7 @@
 {
   "name": "update-documentation",
-  "description": "Review README.md, CLAUDE.md, and other documentation across a repo for stale or missing content, using a subagent so the review does not consume the main context.",
-  "version": "1.0.0",
+  "description": "Reviews and updates a repo's documentation (README.md, CLAUDE.md, and any other docs) against the current code, using a subagent so the review stays out of the main context.",
+  "version": "1.0.1",
   "author": {
     "name": "Judson Neer",
     "email": "jud@greyflannelconsulting.com"

@@ -32,9 +32,10 @@ disclosure so `SKILL.md` stays small and detail loads only when needed.
 
 Covers naming (verb-first for skills that act, noun phrases for skills that are
 reference), writing a description that actually triggers, the four disclosure
-levels and what belongs at each, the full frontmatter field reference, and
-verification by trigger test, near-miss test, and baseline comparison. Bundles a
-copyable template and checklist.
+levels and what belongs at each (including per-form files behind a routing
+table, and bundled scripts and starter assets), the full frontmatter field
+reference, and verification by trigger test, near-miss test, and baseline
+comparison. Bundles a copyable template and checklist.
 
 ### draw-architecture-diagram
 
@@ -43,7 +44,8 @@ way I draw them: one account or project boundary, layers running from users to
 business logic to data to background jobs, and external systems as clouds
 around the edge. Covers four archetypes (application, data platform, pipeline,
 multi-tenant concept), edge and label conventions, porting between clouds, and
-the exact draw.io style strings for the recurring elements.
+the exact draw.io style strings for the recurring elements. Ships a sanitized
+`template.drawio` as the starting point for application diagrams.
 
 ### style-of-the-faith
 
@@ -74,8 +76,8 @@ from its own set of samples:
   and hours tracking, with the math always visible
 - `write-feedback`: feedback letters, recommendations, reviews,
   self-assessments, resumes, bios, and talk tracks for hard conversations
-- `write-notes`: meeting notes, scratchpads, agendas, speaker notes, and
-  interview guides
+- `write-agenda`: interview guides, screening agendas, 1-on-1 agendas, and
+  question banks
 
 They ship in one plugin because they share the core voice and its linter.
 `scripts/voice_lint.py` is a small, dependency-free, warnings-only check for

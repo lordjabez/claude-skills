@@ -40,7 +40,7 @@
     {
       "name": "update-documentation",
       "source": "./plugins/update-documentation",
-      "description": "Review README.md, CLAUDE.md, and other documentation across a repo for stale or missing content, using a subagent so the review does not consume the main context.",
+      "description": "Reviews and updates a repo's documentation (README.md, CLAUDE.md, and any other docs) against the current code, using a subagent so the review stays out of the main context.",
       "category": "productivity",
       "author": {
         "name": "Judson Neer"
@@ -50,7 +50,7 @@
     {
       "name": "write-as-jud",
       "source": "./plugins/write-as-jud",
-      "description": "Write prose in Judson Neer's voice: emails and blog posts from a shared core voice, plus companion skills for proposals, estimates, feedback and reviews, and working notes, with an advisory linter for mechanical tells. Published as a worked example of a personal voice skill; fork it and redo the analysis on your own writing.",
+      "description": "Write prose in Judson Neer's voice: emails and blog posts from a shared core voice, plus companion skills for proposals, estimates, feedback and reviews, and interview and 1-on-1 agendas, with an advisory linter for mechanical tells. Published as a worked example of a personal voice skill; fork it and redo the analysis on your own writing.",
       "category": "productivity",
       "author": {
         "name": "Judson Neer"

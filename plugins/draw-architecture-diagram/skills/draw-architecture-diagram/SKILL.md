@@ -19,15 +19,14 @@ Derived from about 25 draw.io files and exports, which come down to roughly 12
 distinct diagrams once page variants and cloud ports are collapsed. They span
 2021-2025, AWS, GCP, and Azure, and serve both proposals and as-built docs.
 Several were inherited or co-drawn, so these conventions come from patterns
-that hold across many diagrams. Single diagrams that deviate are listed at the
-end as options, not rules.
+that hold across many diagrams.
 
 ## Pick the archetype
 
 | Archetype | When | Shape |
 | --- | --- | --- |
 | **Application infrastructure** | A web app or API platform. The most common archetype | One boundary box with layers in a fixed order (below) |
-| **Data platform or secure enclave** | Multi-account data lakes and researcher enclaves | Account columns split by heavy rules, a dashed box around the pipeline that crosses them |
+| **Data platform or secure enclave** | Multi-account data lakes and researcher enclaves | Account columns split by heavy rules, a dashed box around the pipeline that crosses them. Open [data-platform.md](data-platform.md) for the layout |
 | **Pipeline or data flow** | Explaining how records move through jobs, for engineers | Numbered components, edges labeled with data, a Notes list |
 | **Multi-tenant concept** | Exec or funder audience, showing how it scales | One tenant block repeated three times, feeding a shared component |
 
@@ -50,31 +49,29 @@ left edge and background jobs at the right.
 
 1. **Outside the boundary, at the top**: a user group icon centered and labeled
    above ("Users", or split as "Authenticated Users" / "Unauthenticated
-   Users"). Identity sits to its left: the identity provider as a lock icon,
-   with upstream IdPs as cloud shapes ("State IdP", "3P IdP").
+   Users"). The identity provider sits to its left as a lock icon, joined to
+   the users by a dotted "OAuth" edge.
 2. **The boundary**: one large plain rectangle (or the vendor's account group)
    labeled at the top in bold: "GCP Project", "AWS Account". The diagram title
    goes in large plain text just above the boundary, top right ("Case Management
    Application").
-3. **The top row inside**: cross-cutting platform services in a line, with no
-   edges (DNS, IAM, logging, monitoring, trace, WAF), then the entry point: a
-   CDN, load balancer, or API gateway.
-4. **API compute**: a labeled white or light-gray panel named by role ("REST
-   API", "API Lambdas", "API Functions") holding the function or service icons.
-   Label the icons with a short functional name ("Resume Upload", "Candidate
-   Matching"). Use a row of identical unlabeled icons when the point is "many
-   functions".
+3. **The top row inside**: cross-cutting platform services in a line (DNS,
+   IAM, logging, monitoring), with the entry point (a load balancer, CDN, or
+   API gateway) in the same row and its WAF beside it. Only the entry point
+   and WAF carry edges.
+4. **Request compute**: one icon per service, labeled by role ("Frontend
+   Service", "Backend Service"), with the entry point routing to each.
 5. **The data row**: databases, object storage, search indexes, and queues,
-   each labeled by role. Don't add encryption key icons beside the stores.
-   They appear in some inherited diagrams, but he doesn't want them. If
-   encryption at rest matters to the reader, say so in the accompanying text.
-6. **Background compute**: a second panel ("Backend Lambdas", "Background /
-   Admin Jobs", "Microservices") with a scheduler or queue next to it.
-7. **External systems** go outside the boundary at the bottom or edges, as
-   cloud shapes with plain names ("Jobs API", "Email Service"). Put a small
-   note beside one when sourcing matters ("from GCP Marketplace").
-8. **CI/CD**, if shown, is a small separate panel down the right side:
-   repository, then build, then registry, stacked vertically.
+   each a single icon labeled by role. If encryption at rest matters to the
+   reader, say so in the accompanying text.
+6. **Background compute**: a single icon labeled by role ("Background Job"),
+   with its scheduler or queue to the left feeding it.
+7. **External systems** go outside the boundary at the bottom, as cloud shapes
+   with plain names ("External API", "Email Service"), each fed by the compute
+   that calls it.
+8. **CI/CD**, if shown, is a small panel down the right side: repository, then
+   build, then registry, stacked vertically, with a dashed edge from the panel
+   to each compute icon it deploys.
 
 When one account holds two subsystems, give each a light-gray (`#F5F5F5`)
 panel with a large title ("Recommendation Engine"). When the customer's
@@ -82,28 +79,14 @@ network wraps the account, nest the boundaries (customer network around our
 account and VPC) and show the customer's firewalls, WAF, and load balancers
 explicitly, with ports on the edges.
 
-## Data platform layout
-
-- An organization title at the top, then accounts as columns separated by
-  heavy vertical and horizontal rules, each labeled in italics ("Management
-  Account", "Data Sub-Account").
-- An access note under the account name, in small bold caps: "ADMIN-ONLY
-  ACCESS".
-- Shared security services (SSO, org audit trail, security hub, directory) go
-  in the management account at the top, flowing down into the sub-accounts.
-- The pipeline that crosses accounts sits inside a dashed box with a bold
-  title at the bottom right ("Data Integration Pipeline").
-- Data is split by sensitivity into separate buckets
-  ("Raw Data", "PII Data", "Non-PII Data", "De-identified Data").
-- The researcher-facing tools appear as a callout of tool logos (BI tool, R,
-  Python) above the virtual desktop icon.
-
 ## Edges
 
 - **Orthogonal routing** for internal connections.
 - **Dotted lines for traffic over the public internet** (user to CDN, user to
   IdP), labeled with the protocol: "HTTPS", "OAuth", "SAML". Use solid lines
   inside the boundary.
+- **Dashed lines for deployment**, from the CI/CD panel to the compute it
+  deploys, unlabeled.
 - **Bidirectional arrows** between compute and storage for read/write, and
   single arrows for one-way feeds.
 - **Labels are sparse.** Give infrastructure diagrams protocol labels (and
@@ -143,36 +126,26 @@ Exact draw.io style strings for the recurring elements are in
 
 ## Producing the file
 
-1. Write `.drawio` XML using the styles in [reference.md](reference.md). Mixing
-   icon generations (`aws3` and `aws4`) is normal in his files, so don't spend
-   effort on icon-set purity.
-2. Render to check the layout:
+1. For the application infrastructure archetype, copy
+   [template.drawio](template.drawio) as the starting point. It's a sanitized
+   GCP diagram with every layer from the layout above already placed: identity
+   and users, the platform-services row, frontend, backend, and background
+   compute, the data row, external clouds, and a CI/CD panel with its deploy
+   edges. Relabel it, delete the parts the
+   system doesn't have, and for AWS swap the icons and boundary using
+   [reference.md](reference.md) while keeping the positions.
+2. For other archetypes, write `.drawio` XML using the styles in
+   [reference.md](reference.md). Mixing icon generations (`aws3` and `aws4`)
+   is normal in his files, so icon-set purity isn't worth effort.
+3. Render to check the layout:
 
    ```bash
    /Applications/draw.io.app/Contents/MacOS/draw.io -x -f png -s 1 -o out.png diagram.drawio
    ```
 
-3. Look at the render, then fix overlapping labels and any edge that crosses a
+4. Look at the render, then fix overlapping labels and any edge that crosses a
    boundary it shouldn't.
-4. Clean up the PNG unless it was asked for.
-
-## Options seen once (don't default to these)
-
-- Right-to-left flow, from data sources on the right to a public site on the
-  left (one executive concept diagram). Left to right, with users on the left,
-  is the normal landscape choice.
-- Encryption key icons beside every data store (inherited diagrams). He
-  doesn't want these, so leave them out even when porting one of those
-  diagrams.
-- Numbered components keyed to a Notes list giving trigger, schedule, and
-  source link (one operational pipeline diagram). Use it when the audience is
-  on-call engineers.
-- GCP "card" style boxes with drop shadows (two related enclave diagrams). His
-  usual GCP style is flat icons.
-- Thick colored block arrows, rounded colored zones, and a title with an
-  "Updated YYYY-MM-DD" line in the top left (one early Azure draft).
-- Marketing-style capability groupings with no real data flow (one
-  pre-existing overview).
+5. Clean up the PNG unless it was asked for.
 
 ## Check the diagram
 

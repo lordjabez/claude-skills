@@ -1,7 +1,31 @@
 # Skill Reference
 
-Open this when writing frontmatter, deciding where a skill lives, or bundling
-scripts. The workflow itself is in [SKILL.md](SKILL.md).
+Open this when naming a skill, calibrating a description, writing frontmatter,
+deciding where a skill lives, or bundling scripts and assets. The workflow
+itself is in [SKILL.md](SKILL.md).
+
+## Naming
+
+Agent-form nouns (`skill-creator`, `hook-development`) are common in published
+skills, but they read as a thing being summoned rather than a job being asked
+for. Prefer the verb.
+
+For personal and project skills the directory name is the command name, so pick
+the directory carefully and keep `name:` in frontmatter matching it. Names
+cannot contain whitespace padding, parentheses, commas, or control characters.
+
+## Description examples
+
+```yaml
+# Weak: nothing to match against
+description: Helps with database work
+
+# Strong: states the action, then enumerates triggers
+description: >-
+  Runs and reviews PostgreSQL migrations for this repo. Use when the user asks
+  to add, edit, roll back, or squash a migration, mentions Alembic or
+  `alembic upgrade`, or hits a "target database is not up to date" error.
+```
 
 ## Frontmatter fields
 
@@ -52,6 +76,7 @@ my-skill/
 ├── SKILL.md        # required: workflow plus a map of what to open next
 ├── reference.md    # lookup material, read on demand
 ├── examples.md     # worked examples, read on demand
+├── template.drawio # asset: copied and edited, never read whole
 └── scripts/
     └── helper.py   # executed, never loaded into context
 ```

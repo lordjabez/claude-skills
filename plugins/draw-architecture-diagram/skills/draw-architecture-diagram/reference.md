@@ -6,15 +6,15 @@ connection arrays and long embedded SVGs trimmed. Paste them into
 
 ## Containers
 
-Plain boundary, or a panel such as "REST API" or "Backend Lambdas", with the
-label at the top:
+Plain boundary, or a panel such as "CI/CD Pipeline", with the label at the
+top:
 
 ```text
 rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;
 ```
 
-Light-gray panel for a subsystem or job group (use `#F5F5F5` for a subsystem
-with a large title):
+Light-gray panel for a subsystem (use `#F5F5F5` when it has a large
+title):
 
 ```text
 rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=top;fillColor=#F2F2F2;
@@ -49,7 +49,7 @@ Identity provider (lock):
 shape=mxgraph.cisco19.lock;fillColor=#005073;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;aspect=fixed;html=1;
 ```
 
-External system or upstream IdP:
+External system:
 
 ```text
 ellipse;shape=cloud;whiteSpace=wrap;html=1;
@@ -86,6 +86,12 @@ Internet traffic (dotted), labeled with the protocol through `value`:
 
 ```text
 html=1;rounded=0;dashed=1;dashPattern=1 1;startArrow=classic;endArrow=none;fontSize=12;
+```
+
+Deployment from CI/CD (dashed, unlabeled):
+
+```text
+edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;
 ```
 
 ## Fonts

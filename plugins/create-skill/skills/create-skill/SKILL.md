@@ -17,8 +17,9 @@ A skill earns its place by changing what Claude does. Two things decide whether
 it works: a description that fires at the right moment, and a body that spends
 as little context as possible getting there.
 
-Open [reference.md](reference.md) for frontmatter fields, skill locations,
-bundled-script mechanics, and how to measure a skill properly.
+Open [reference.md](reference.md) for naming rules, description examples,
+frontmatter fields, skill locations, bundled-script mechanics, and how to
+measure a skill properly.
 Open [template.md](template.md) for a copyable skeleton and a final checklist.
 
 ## Step 0: Confirm a skill is the right container
@@ -45,41 +46,23 @@ as `/name` and pick the form that sounds right at the point of use:
 - A skill that **is knowledge** loaded into context takes a noun phrase:
   `api-conventions`, `markdown`, `claude-api`.
 
-Agent-form nouns (`skill-creator`, `hook-development`) are common in published
-skills, but they read as a thing being summoned rather than a job being asked
-for. Prefer the verb.
-
-For personal and project skills the directory name is the command name, so pick
-the directory carefully and keep `name:` in frontmatter matching it. Names
-cannot contain whitespace padding, parentheses, commas, or control characters.
+Prefer the verb over agent-form nouns like `skill-creator`.
 
 ## Step 2: Write the description
 
-This is the highest-leverage part of the file. It sits in context for every
-session whether or not the skill ever runs, and it is the only evidence Claude
-has when deciding to load the rest.
+This is the highest-leverage part of the file: always in context, and the only
+evidence Claude has when deciding to load the rest.
 
 Write it in third person, describing what the skill does and when to use it.
 Name the concrete triggers: the verbs, file types, tool names, and error strings
 that should pull it in. Vague descriptions are the single most common reason a
 skill never fires.
 
-Lean past merely accurate. In practice Claude undertriggers skills: the usual
-failure is a genuinely useful skill sitting unused because its description was
-written modestly, not a skill firing too eagerly. Name the adjacent phrasings,
+Lean past merely accurate. Claude undertriggers skills far more often than it
+overtriggers them. Name the adjacent phrasings,
 and say outright that the skill applies even when the user does not name the
-thing directly.
-
-```yaml
-# Weak: nothing to match against
-description: Helps with database work
-
-# Strong: states the action, then enumerates triggers
-description: >-
-  Runs and reviews PostgreSQL migrations for this repo. Use when the user asks
-  to add, edit, roll back, or squash a migration, mentions Alembic or
-  `alembic upgrade`, or hits a "target database is not up to date" error.
-```
+thing directly. A weak and a strong description side by side are in
+[reference.md](reference.md); open them if the first draft reads as a category.
 
 Keep it under roughly 1,500 characters, and prefer specificity over hedging.
 Read the description back and ask: from this line alone, in a session that knows
@@ -108,27 +91,30 @@ still works.
    ceiling 500. It should read as a workflow plus a map of what to open next.
 3. **Bundled files** (`reference.md`, `examples.md`, `api/*.md`). Read only when
    the body sends Claude there for a specific need. No size limit that matters.
-4. **Scripts** (`scripts/*.py`, `scripts/*.sh`). Executed, never read into
-   context. Deterministic work belongs here, not in prose that Claude has to
-   re-derive each run.
+4. **Scripts and assets** (`scripts/*.py`, `template.drawio`,
+   `starter.docx`). Scripts are executed and assets are copied and edited, so
+   neither is read into context. Deterministic work belongs here, not in prose
+   that Claude has to re-derive each run.
 
 Split a file out when it is needed by one branch of the workflow rather than
 every run, when it is lookup material (tables, schemas, field lists) rather than
 instruction, or when it would push SKILL.md past a screen or two of reading.
 Keep it inline when every run needs it.
 
+When a skill covers several forms or modes and each run needs only one, route
+with a table whose last column opens that form's own file (the skeleton in
+[template.md](template.md) shows one), and keep in SKILL.md only what every
+form shares, such as a final check.
+
 The clearest signal that something belongs in `scripts/` is repetition across
 runs. If invoking the skill keeps ending with Claude writing more or less the
 same helper, write it once, bundle it, and point at it. That removes the tokens
-and the run-to-run variation in one move.
+and the run-to-run variation in one move. The same goes for output: if Claude
+keeps assembling the same starting file, bundle a sanitized one as an asset and
+have it copy that.
 
-Every bundled file needs a pointer in SKILL.md that says when to open it:
-
-```markdown
-- Full field list and validation rules: [reference.md](reference.md)
-- Worked before/after examples: [examples.md](examples.md)
-```
-
+Every bundled file needs a pointer in SKILL.md that says when to open it,
+such as "Full field list and validation rules: [reference.md](reference.md)".
 A link with no "open this when" line will be ignored or, worse, read every time.
 
 ## Step 4: Write the body
@@ -146,31 +132,19 @@ A link with no "open this when" line will be ignored or, worse, read every time.
 - Include the failure modes: what usually goes wrong, and what to do about it.
 - Cut anything Claude already knows. Generic language or tool knowledge is
   filler; repo-specific and workflow-specific knowledge is the payload.
+- Describe the pattern you want. When a skill is derived from samples, drop the
+  one-off deviations instead of listing them as things to avoid: the list costs
+  context every run and puts the unwanted pattern in front of Claude. A rule
+  that is only a prohibition should be rewritten as what to do, or cut.
 
 ## Step 5: Verify it
 
-1. Lint the Markdown: `npx markdownlint-cli --disable MD013 -- <file>.md`.
-2. Confirm the frontmatter uses only supported keys (see
-   [reference.md](reference.md)). An unknown key is a hard error on packaging.
-3. Confirm the skill is listed: run `/skills`, or `/skill-doctor` if available,
-   for a structural report.
-4. Trigger-test it. In a fresh session, use a phrase from the intended trigger
-   set and confirm the skill loads without being named.
-5. Near-miss test it. Try a prompt that shares vocabulary or subject matter with
-   the skill but needs something else. An obviously unrelated prompt proves
-   nothing; the negative case has to be one a naive keyword match would get
-   wrong. If either test comes out wrong, fix the description, not the body.
-6. Baseline it, for any skill worth the effort of building. Run a representative
-   task in a session without the skill and compare. Equivalent outputs mean the
-   skill is spending context and buying nothing. Judge it on the general case
-   rather than the two or three prompts you happened to test with, and resist
-   tightening the skill around those specific examples.
-
-Those checks are enough for a personal or project skill. A skill that will run
-at scale, where a spot check is not proof, wants a real eval harness instead:
-see "Measuring a skill" in [reference.md](reference.md).
+Work through "Verify it" in [template.md](template.md) before calling the skill
+done: lint, frontmatter keys, a trigger test, a near-miss test, and a baseline
+run without the skill. If a trigger test fails, fix the description, not the
+body.
 
 ## Step 6: Document it
 
-If the skill lives in a repo that describes its own skills, add it there.
-In this config repo, that means a bullet in `README.md`.
+If the skill lives in a repo or marketplace that lists its skills, such as a
+README or a plugin manifest, add it there.

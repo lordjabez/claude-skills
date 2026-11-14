@@ -1,7 +1,7 @@
 {
   "name": "write-as-jud",
-  "description": "Write prose in Judson Neer's voice: emails and blog posts from a shared core voice, plus companion skills for proposals, estimates, feedback and reviews, and working notes, with an advisory linter for mechanical tells. Published as a worked example of a personal voice skill; fork it and redo the analysis on your own writing.",
-  "version": "2.1.0",
+  "description": "Write prose in Judson Neer's voice: emails and blog posts from a shared core voice, plus companion skills for proposals, estimates, feedback and reviews, and interview and 1-on-1 agendas, with an advisory linter for mechanical tells. Published as a worked example of a personal voice skill; fork it and redo the analysis on your own writing.",
+  "version": "3.0.0",
   "author": {
     "name": "Judson Neer",
     "email": "jud@greyflannelconsulting.com"
