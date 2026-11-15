@@ -36,7 +36,7 @@ any case.
 | Field | Purpose |
 | --- | --- |
 | `name` | Display label. For plugin skills it also sets the final command segment. |
-| `description` | What the skill does and when to use it. Always in context. |
+| `description` | What the skill does and when to use it. Always in context. At most 1,024 characters, or plugin install fails. |
 | `when_to_use` | Optional split of the trigger half of the description. Combined with `description`, capped at 1,536 characters. |
 | `allowed-tools` | Tools Claude may use without a permission prompt during the turn the skill is invoked, e.g. `Read Grep` or `Bash(${CLAUDE_SKILL_DIR}/scripts/render.sh *)`. |
 | `disable-model-invocation` | `true` restricts the skill to manual `/name` invocation and blocks preloading into subagents and scheduled tasks. Use for anything with side effects, such as a deploy. |

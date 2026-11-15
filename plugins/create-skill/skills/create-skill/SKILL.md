@@ -64,7 +64,9 @@ and say outright that the skill applies even when the user does not name the
 thing directly. A weak and a strong description side by side are in
 [reference.md](reference.md); open them if the first draft reads as a category.
 
-Keep it under roughly 1,500 characters, and prefer specificity over hedging.
+Keep it to at most 1,024 characters, a hard limit: installing a plugin fails
+on a longer one, and `claude plugin validate` does not catch it. Prefer
+specificity over hedging.
 Read the description back and ask: from this line alone, in a session that knows
 nothing else about the skill, would the right prompt trigger it and the wrong
 prompt not?
