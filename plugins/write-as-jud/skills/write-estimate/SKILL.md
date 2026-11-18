@@ -9,7 +9,7 @@ description: >-
   the math" for a project or bid, or to explain how a price was reached to a
   colleague or partner, even if the word "estimate" never appears. For a
   formal staffing-plan workbook use a spreadsheet skill instead; for the
-  buyer-facing cost narrative in a proposal use write-proposal.
+  buyer-facing cost narrative in a proposal use a proposal skill.
 allowed-tools: Bash(${CLAUDE_SKILL_DIR}/../write-as-jud/scripts/voice_lint.py *)
 ---
 

@@ -67,11 +67,9 @@ Writes prose in my voice: emails, blog posts, social posts, and anything else
 going out under my name. Built from an analysis of about 350 long-form pieces
 and 850 sent emails, with a shared core voice plus modes for email and blog.
 
-Four companion skills build on the core voice for other genres, each derived
+Three companion skills build on the core voice for other genres, each derived
 from its own set of samples:
 
-- `write-proposal`: proposals, RFP and RFI responses, SOWs, architecture
-  narratives, and security questionnaire answers
 - `write-estimate`: level-of-effort estimates, pricing rationale, work orders,
   and hours tracking, with the math always visible
 - `write-feedback`: feedback letters, recommendations, reviews,

@@ -6,7 +6,7 @@ description: >-
   under his name. Use whenever he asks to draft, write, reply to, rewrite, punch
   up, shorten, or "make this sound like me", and just as readily when he never
   says "as me" but is plainly authoring his own writing rather than the
-  project's. Proposals, estimates, feedback and reviews, and interview and
+  project's. Estimates, feedback and reviews, and interview and
   1-on-1 agendas have their own skills in this plugin, which build on this
   one. Do not use it for code, code comments, commit messages, pull request
   descriptions, or technical documentation, which follow the repo's own
@@ -32,7 +32,6 @@ voice below and says only what changes:
 
 | Writing | Skill |
 | --- | --- |
-| Proposals, RFP and RFI responses, SOWs, architecture narratives, whitepapers, security questionnaires | `write-proposal` |
 | Estimates, pricing rationale, work orders, hours tracking | `write-estimate` |
 | Feedback letters, recommendations, reviews, self-assessments, resumes, bios, hard-conversation talk tracks | `write-feedback` |
 | Interview guides, screening agendas, 1-on-1 agendas and question banks | `write-agenda` |
@@ -48,7 +47,7 @@ Run the bundled linter on the draft, with the mode that matches the writing:
 ${CLAUDE_SKILL_DIR}/scripts/voice_lint.py --mode email draft.md
 ```
 
-Modes are `email`, `blog`, `proposal`, `agenda`, `estimate`, and `feedback`. It
+Modes are `email`, `blog`, `agenda`, `estimate`, and `feedback`. It
 flags mechanical tells: em dashes, phrases from [scripts/tells.txt](scripts/tells.txt),
 "not X but Y" framing, spelled-out contractions, missing asides, length, and
 throat-clearing openers and closers. Every finding is a warning. Fix the ones

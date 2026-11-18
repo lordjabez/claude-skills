@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Advisory prose linter for the write-as-jud skill.
 
-Usage: voice_lint.py [--mode email|blog|proposal|agenda|estimate|feedback] FILE
+Usage: voice_lint.py [--mode email|blog|agenda|estimate|feedback] FILE
 
 FILE may be "-" for stdin. Every finding is a warning and the exit code is
 always 0; this is a nudge, not a gate.
@@ -12,7 +12,7 @@ import re
 import sys
 from pathlib import Path
 
-MODES = ("email", "blog", "proposal", "agenda", "estimate", "feedback")
+MODES = ("email", "blog", "agenda", "estimate", "feedback")
 CAP = 10
 CEILING = {"email": 150, "blog": 700, "feedback": 600}
 SKIP_NOT_X = {"agenda"}
