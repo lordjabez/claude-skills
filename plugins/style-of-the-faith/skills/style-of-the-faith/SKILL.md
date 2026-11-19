@@ -67,13 +67,18 @@ The role assignments are defaults, not dogma; any swatch in
   [palette.md](palette.md)
 - CSS custom properties for every swatch and role, font stacks, and the Google
   Fonts link, for any HTML or WeasyPrint output: [tokens.css](tokens.css)
+- The reader that Python builders of Office files use to look tokens up by
+  name: [tokens.py](tokens.py)
 
 ## Using it from another skill
 
 A calling skill should say "load `style-of-the-faith`" and then apply its tokens
 in whatever format it produces. For HTML or WeasyPrint, link or inline
-`tokens.css` and use the `var(--…)` names. For python-pptx, docx, or
-matplotlib, read hex values from `palette.md` and set the font names exactly
-as written above. Office formats do not embed web fonts by default, so tell
+`tokens.css` and use the `var(--…)` names. A Python script that builds Word,
+PowerPoint, or Excel files takes the path to `tokens.css` as an argument and
+imports `tokens.py` from the same directory to look values up by token name, so
+it holds no hex value or font name of its own (usage is in the module's
+docstring). For a one-off python-pptx, docx, or matplotlib job, read hex values
+from `palette.md` and set the font names exactly as written above. Office formats do not embed web fonts by default, so tell
 the user that Libre Franklin and EB Garamond must be installed on any machine
 that opens the file, or embed them if the library supports it.

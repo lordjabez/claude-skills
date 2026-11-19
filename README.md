@@ -53,7 +53,8 @@ The visual identity of the Church of the Incandescent Filaments: a named
 palette of 43 swatches, Libre Franklin and EB Garamond typography, semantic
 color roles, and contrast guidance. Holds no workflow of its own. Skills that
 build decks, documents, and artifacts load it so colors and fonts live in one
-place. Ships a `tokens.css` for HTML and WeasyPrint output.
+place. Ships a `tokens.css` for HTML and WeasyPrint output, and a
+`tokens.py` reader for Python scripts that build Office files.
 
 ### update-documentation
 
