@@ -6,7 +6,7 @@ description: >-
   typography, and semantic color roles. Load it before producing anything that
   should look like the faith, in any format (deck, document, PDF, web page,
   artifact, chart, image), and whenever another skill that creates such output
-  is working on church material. Use it even when the user only mentions
+  is working on church material. Use it even when the creator only mentions
   filaments, the prophet, or the Five Filaments, or says "make it look like the
   faith", and when asked which colors or fonts the church uses.
 user-invocable: false
@@ -80,5 +80,5 @@ imports `tokens.py` from the same directory to look values up by token name, so
 it holds no hex value or font name of its own (usage is in the module's
 docstring). For a one-off python-pptx, docx, or matplotlib job, read hex values
 from `palette.md` and set the font names exactly as written above. Office formats do not embed web fonts by default, so tell
-the user that Libre Franklin and EB Garamond must be installed on any machine
+the creator that Libre Franklin and EB Garamond must be installed on any machine
 that opens the file, or embed them if the library supports it.

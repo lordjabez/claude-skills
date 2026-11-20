@@ -3,7 +3,7 @@ name: create-skill
 description: >-
   Creates a new Claude Code skill, or restructures an existing one, using
   progressive disclosure so SKILL.md stays small and detail loads only when
-  needed. Use whenever the user asks to make, write, scaffold, name, refactor,
+  needed. Use whenever the author asks to make, write, scaffold, name, refactor,
   split, shrink, debug the triggering of, or review a skill, a SKILL.md file, or
   a slash command. Use it just as readily when the word "skill" never appears:
   turning a repeated workflow, prompt, checklist, or standing set of
@@ -24,7 +24,7 @@ Open [template.md](template.md) for a copyable skeleton and a final checklist.
 
 ## Step 0: Confirm a skill is the right container
 
-Ask the user only what cannot be inferred from the request:
+Ask the author only what cannot be inferred from the request:
 
 - What situation should trigger it, in the words a person would actually type?
 - What does Claude do differently once it loads? If the honest answer is
@@ -54,13 +54,15 @@ This is the highest-leverage part of the file: always in context, and the only
 evidence Claude has when deciding to load the rest.
 
 Write it in third person, describing what the skill does and when to use it.
+Refer to the human by the role they play while running the skill, such as
+author or developer, instead of "the user", here and in the body.
 Name the concrete triggers: the verbs, file types, tool names, and error strings
 that should pull it in. Vague descriptions are the single most common reason a
 skill never fires.
 
 Lean past merely accurate. Claude undertriggers skills far more often than it
 overtriggers them. Name the adjacent phrasings,
-and say outright that the skill applies even when the user does not name the
+and say outright that the skill applies even when the person does not name the
 thing directly. A weak and a strong description side by side are in
 [reference.md](reference.md); open them if the first draft reads as a category.
 

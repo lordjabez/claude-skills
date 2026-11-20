@@ -22,7 +22,7 @@ description: Helps with database work
 
 # Strong: states the action, then enumerates triggers
 description: >-
-  Runs and reviews PostgreSQL migrations for this repo. Use when the user asks
+  Runs and reviews PostgreSQL migrations for this repo. Use when the developer asks
   to add, edit, roll back, or squash a migration, mentions Alembic or
   `alembic upgrade`, or hits a "target database is not up to date" error.
 ```

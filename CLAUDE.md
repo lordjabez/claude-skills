@@ -38,3 +38,5 @@ Several things must stay in agreement, and `validate` won't catch drift in all o
 ## Writing rules for skill content
 
 Describe the pattern wanted; don't keep lists of one-off deviations or anti-examples from source material. The voice skills deliberately avoid em dashes, "not X but Y" framing, and the filler phrases in `tells.txt`. Hold edits to those skills, and their examples, to the same rules. Examples in the voice skills are invented to match observed patterns, except blog quotes, which come from the public blog.
+
+Refer to the human running a skill by the role they play in it (author, developer, creator, and so on), never as "the user". The literal `user-invocable` key and end users of a system being described, such as the user layer in an architecture diagram, are exceptions.
